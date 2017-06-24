@@ -26,6 +26,6 @@ int main(int argc, char const *argv[]) {
     vector<int> *v = new vector<int>;
     v->push_back(4);
     v->push_back(7);
-    cout<<v->front()<<endl;
+    cout<<v->size()<<endl;
     return 0;
 }
