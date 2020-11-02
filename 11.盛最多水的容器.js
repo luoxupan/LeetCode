@@ -10,19 +10,7 @@
  * @return {number}
  */
 var maxArea = function(height) {
-  let l = 0;
-  let r = height.length - 1;
-  let ret = 0;
-  while (l < r) {
-    const count = (r - l) * Math.min(height[l], height[r]);
-    ret = ret > count ? ret : count;
-    if (height[l] > height[r]) {
-      r--;
-    } else {
-      l++;
-    }
-  }
-  return ret;
+
 };
 // @lc code=end
 
