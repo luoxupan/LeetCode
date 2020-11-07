@@ -34,7 +34,7 @@ var mergeKLists = function(lists) {
           curIndex = i;
         }
       } else {
-        lists.splice(i, 1);
+        lists.splice(i, 1); 
         i--;
       }
     }
