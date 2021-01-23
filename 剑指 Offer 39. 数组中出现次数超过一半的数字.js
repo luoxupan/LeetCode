@@ -18,3 +18,4 @@ var majorityElement = function(nums) {
   }
   return char;
 };
+
