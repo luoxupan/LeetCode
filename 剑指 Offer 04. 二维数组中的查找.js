@@ -4,21 +4,18 @@
  * @return {boolean}
  */
 var findNumberIn2DArray = function(matrix, target) {
-  let row = matrix.length;
-  if (row === 0) {
-    return false;
-  }
-  let column = matrix[0].length;
-  let j = column - 1;
-  let i = 0;
-  while (i < row && j >= 0) {
-    let cur = matrix[i][j];
-    if (cur === target) {
+  if (matrix.length === 0) return false;
+  var row = matrix.length - 1;
+  var col = matrix[0].length - 1;
+  var r = 0;
+  var c = col;
+  while (r <= row && c >= 0) {
+    if (matrix[r][c] === target) {
       return true;
-    } else if (cur > target) {
-      j--;
+    } else if (matrix[r][c] > target) {
+      c--;
     } else {
-      i++;
+      r++;
     }
   }
   return false;
