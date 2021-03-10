@@ -1,6 +1,6 @@
 var CQueue = function() {
-  this.s_01 = [];
-  this.s_02 = [];
+  this.s_1 = [];
+  this.s_2 = [];
 };
 
 /** 
@@ -8,19 +8,19 @@ var CQueue = function() {
  * @return {void}
  */
 CQueue.prototype.appendTail = function(value) {
-  this.s_01.push(value);
+  this.s_1.push(value);
 };
 
 /**
  * @return {number}
  */
 CQueue.prototype.deleteHead = function() {
-  if (this.s_02.length === 0) {
-    while (this.s_01.length > 0) {
-      this.s_02.push(this.s_01.pop())
+  if (this.s_2.length === 0 && this.s_1.length > 0) {
+    while (this.s_1.length > 0) {
+      this.s_2.push(this.s_1.pop());
     }
   }
-  return this.s_02.length > 0 ? this.s_02.pop() : -1;
+  return this.s_2.length === 0 ? -1 : this.s_2.pop();
 };
 
 /**
@@ -29,4 +29,3 @@ CQueue.prototype.deleteHead = function() {
  * obj.appendTail(value)
  * var param_2 = obj.deleteHead()
  */
-  
