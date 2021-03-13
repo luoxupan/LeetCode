@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var exchange = function(nums) {
+ var exchange = function(nums) {
   var l = 0;
   var r = nums.length - 1;
   while (l < r) {
@@ -13,9 +13,9 @@ var exchange = function(nums) {
       r--;
     }
     if (l < r) {
-      var c = nums[l];
+      var temp = nums[l];
       nums[l] = nums[r];
-      nums[r] = c;
+      nums[r] = temp;
     }
   }
   return nums;
