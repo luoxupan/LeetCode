@@ -1,4 +1,4 @@
-# LeetCode 
+# LeetCode
 
 ### 算法/技巧 集锦
 
