@@ -46,7 +46,7 @@ var kthLargest = function(root, k) {
 
 var front = function(root, queue) {
   // 中序遍历
-  if (root === null) return queue;
+  if (root === null) return;
   if (root.left) front(root.left, queue);
   queue.unshift(root.val);
   if (root.right) front(root.right, queue);
